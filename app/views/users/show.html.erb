@@ -1,4 +1,11 @@
 <h1><%= @user.name %></h1>
+<%= image_tag @user.profile_pic.url %>
+<p><%= @user.country %></p>
+<p><%= @user.email %></p>
+<p><%= @user.twitter %></p>
+<p><%= @user.website %></p>
+<p><%= @user.bio %></p>
+
 <% @user.songs.each do |song| %>
   <h3><%= song.name %></h3>
     <% song.comments.each do |comment| %>
