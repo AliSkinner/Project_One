@@ -6,15 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.delete_all
-Song.delete_all
-Comment.delete_all
+# User.delete_all
+# Song.delete_all
+# Comment.delete_all
 
 u1 = User.create(name: "Neil Young", bio:"Great stuff. Strange voice")
 u2 = User.create(name: "Bob Dylan", bio:"Bloody marvellous")
 u3 = User.create(name: "Tom Petty", bio:"Brilliant songwriter")
 u4 = User.create(name: "Paul Simon", bio:"Doesn't get much better")
-u5 = User.create(name: "The Black Keys", bio:"great guitau")
+u5 = User.create(name: "The Black Keys", bio:"great guitar")
 
 
 s1 = Song.create(name:"Ohio", user_id: u1.id)

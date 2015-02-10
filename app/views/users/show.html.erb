@@ -8,10 +8,15 @@
 
 <% @user.songs.each do |song| %>
   <h3><%= song.name %></h3>
+    <%= song.file %>
     <% song.comments.each do |comment| %>
       <p><%= comment.content %></p>
   <% end %>
 <% end %>
+
+
+
+<%= render 'songs/form' %>
 
 <p><%= link_to 'Edit Profile', edit_user_path(@user) %> / <%= link_to 'Delete Profile', user_path(@user), method: :delete %></p>
 

@@ -1,0 +1,25 @@
+<div class="add-song">
+
+  <%= form_for Song.new do |f| %>
+  
+    <div class="field">
+        <%= f.label :name %> <br>
+        <%= f.text_field :name %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :file %><br>
+      <%= f.file_field :file %>
+    </div>
+    
+     <div class="field">
+     <%= f.hidden_field :value => :current_user.id %>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+   <% end %>
+</div>

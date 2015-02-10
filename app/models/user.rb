@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
 
   mount_uploader :profile_pic, ProfilePicUploader
 
-  validates :name, presence: true
-  validates :email, presence: true
+  # validates :name, presence: true
+  # validates :email, presence: true
 end
