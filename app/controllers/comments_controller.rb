@@ -10,7 +10,12 @@ class CommentsController < ApplicationController
     # @song = Song.find(params[:id])
     @comment = Comment.create(comment_params)
     # binding.pry
-    
+    redirect_to :back
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
     redirect_to :back
   end
 
