@@ -6,6 +6,8 @@
 
 .song {
   border: 2px solid black;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 .user-info {
@@ -27,16 +29,44 @@
 
 .icon {
   max-height: 50px;
+  margin: 0 10px;
 }
 
-.add-song {
+.song-form {
   border: 2px solid black;
   margin: 10px auto;
   max-width: 70%;
+  padding: 5px;
+  text-align: center;
 }
 
-.add-song li {
+.song-form li {
   display: inline;
   padding: 0 20px;
   font-weight: bold;
 }
+
+.song-form a {
+  text-decoration: none;
+  margin: 0 auto;
+  /*text-align: center;*/
+}
+
+.comment {
+  /*line-height: 5px;*/
+  margin: 5px 0;
+  }
+
+  .comment p {
+    margin:2px;
+  }
+
+  .user-pin {
+    display:inline;
+  }
+
+  #twitter-widget-0 {
+    max-height: 400px;
+    max-width: 200px;
+    float: right;
+  }

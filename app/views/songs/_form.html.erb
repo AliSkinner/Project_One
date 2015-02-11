@@ -1,4 +1,4 @@
-<div class="add-song">
+<!-- <div class="add-song"> -->
  
   <%= form_for Song.new do |f| %>
   <ul>
@@ -15,7 +15,7 @@
     
      <li class="field">
        <%= f.hidden_field :user_id, value: current_user.id %>
-      </li>
+      </li> <br><br>
 
 
     <li class="actions">
@@ -23,4 +23,4 @@
     </li>
   </ul>
    <% end %>
-</div>
+<!-- </div> -->
