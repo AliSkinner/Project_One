@@ -3,20 +3,41 @@
 <p><%= @user.country %></p>
 <p><%= @user.email %></p>
 <p><%= @user.twitter %></p>
-<p><%= @user.website %></p>
+<p><%= link_to @user.website, "#{:website}" %></p>
 <p><%= @user.bio %></p>
+
+<p><%= render 'songs/form' %></p>
 
 <% @user.songs.each do |song| %>
   <h3><%= song.name %></h3>
     <%= audio_tag song.file, controls: true %>
     <% song.comments.each do |comment| %>
+    <div class="comment">
+      <p><%= comment.user.name %> <%= comment.created_at.strftime("%H:%M / %d %b. %Y") %></p>
       <p><%= comment.content %></p>
+    </div>
   <% end %>
+<%#= render 'comments/form' %>
+<div class="add-comment">
+
+  <%= form_for Comment.new do |f| %>
+    <div class="field">
+        <%= f.label :content %> <br>
+        <%= f.text_area :content %>
+    </div>  
+     <div class="field">
+       <%= f.hidden_field :user_id, value: current_user.id %>
+      </div>
+      <div class="field">
+       <%= f.hidden_field :song_id, value: song.id %>
+      </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+   <% end %>
+</div>
 <% end %>
 
-
-
-<%= render 'songs/form' %>
 
 <p><%= link_to 'Edit Profile', edit_user_path(@user) %> / <%= link_to 'Delete Profile', user_path(@user), method: :delete %></p>
 

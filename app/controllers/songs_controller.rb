@@ -5,7 +5,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    binding.pry
+    # binding.pry
     # @song.user_id = current_user.id
     @song = Song.create(song_params)
 
