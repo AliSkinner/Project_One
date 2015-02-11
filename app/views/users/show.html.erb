@@ -12,10 +12,10 @@
 
 
 <div class="song-form">
-  <%# if @user.id = current_user.id %>
-  <%#= if can? :manage, @user %>
+  <% if @user.id == current_user.id %>
+  <%#= if can? :create, @song %>
   <%= render 'songs/form' %>
-  <%# end %>
+  <% end %>
 </div>
 
 <% @user.songs.each do |song| %>
