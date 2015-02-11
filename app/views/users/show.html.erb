@@ -8,7 +8,7 @@
 
 <% @user.songs.each do |song| %>
   <h3><%= song.name %></h3>
-    <%= song.file %>
+    <%= audio_tag song.file, controls: true %>
     <% song.comments.each do |comment| %>
       <p><%= comment.content %></p>
   <% end %>
