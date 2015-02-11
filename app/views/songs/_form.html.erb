@@ -1,25 +1,26 @@
 <div class="add-song">
-
+ 
   <%= form_for Song.new do |f| %>
-  
-    <div class="field">
-        <%= f.label :name %> <br>
+  <ul>
+    <li>Upload New Song</li>
+    <li class="field">
+        <%= f.label :name %> 
         <%= f.text_field :name %>
-    </div>
+    </li>
     
-    <div class="field">
-      <%= f.label :file %><br>
+    <li class="field">
+      <%= f.label :file %>
       <%= f.file_field :file %>
-    </div>
+    </li>
     
-     <div class="field">
+     <li class="field">
        <%= f.hidden_field :user_id, value: current_user.id %>
-      </div>
+      </li>
 
 
-    <div class="actions">
+    <li class="actions">
       <%= f.submit %>
-    </div>
-
+    </li>
+  </ul>
    <% end %>
 </div>

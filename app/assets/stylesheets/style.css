@@ -1,3 +1,41 @@
+.home-banner {
+  max-height: 100px;
+  width: 70%;
+  margin: 0 auto;
+}
+
 .song {
   border: 2px solid black;
+}
+
+.user-info {
+  border: 2px solid black;
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.user-info li {
+  display: inline;
+}
+
+.user-info .profile-show {
+  margin: 0 auto;
+  /*text-align: center;*/
+}
+
+.icon {
+  max-height: 50px;
+}
+
+.add-song {
+  border: 2px solid black;
+  margin: 10px auto;
+  max-width: 70%;
+}
+
+.add-song li {
+  display: inline;
+  padding: 0 20px;
+  font-weight: bold;
 }
