@@ -17,7 +17,7 @@
       <% if can? :manage, song %>
         <%= link_to 'Delete', song_path(song), method: :delete %>
       <% end %>
-      
+
       <% if song.comments.any? %> 
         <% song.comments.each do |comment| %>
           <div class="comment">
@@ -53,7 +53,7 @@
   </div>
   <% end %>
 </div>
-<% if can? :manage, User %>
+<% if @user_id == current_user.id %>
 <p><%= link_to 'Edit Profile', edit_user_path(@user) %> / <%= link_to 'Delete Profile', user_path(@user), method: :delete %></p>
 
 <% end %>
