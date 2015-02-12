@@ -1,7 +1,5 @@
 html {
-  /*font-family: 'Poiret One', cursive;*/
-  font-family: Arial;
-  /*background-color: black;*/
+  font-family: Helvetica Neue;
   background: black fixed;
   color: grey;
 }
@@ -27,9 +25,33 @@ header {
 }
 
 
- a:hover {
-  color: rgba(200,200,200,1);
+ a:hover,
+ .song a:hover {
+  color: rgba(255,255,255,1);
   transition:all 0.5s ease;
+}
+
+.contact {
+  width: 300px;
+  height: 150px;
+  border: 1px solid grey;
+  float: right;
+  margin-top: 45px;
+  margin-right: 10px;
+  right: 0;
+  position: fixed;
+  text-align: center;
+  /*display: inline;*/
+}
+
+.icon2 {
+  /*display: inline;*/
+  max-height: 50px;
+}
+
+.comment-field {
+  padding: 5px;
+  text-align: center;
 }
 
 
@@ -39,6 +61,8 @@ header {
   background-color: black;
   color: grey;
   display: inline;
+  top: 0;
+  /*margin-top: -20px;*/
   /*margin-bottom: 10px;*/
   /*height: 100%;*/
   /*margin-left: 50%;*/
@@ -48,24 +72,28 @@ header {
 
 .site-content {
   margin-top: 70px;
+  /*position: relative;*/
 }
 
 
 .users {
   max-width: 76%;
   float:left;
+  position: relative;
   /*overflow: auto;*/
   /*clear: both;*/
 
 }
 
+
 #twitter-widget-0 {
   max-height: 400px;
   max-width: 20%;
   float: right;
-  margin-top: 100px;
-  position: fixed;
-  /*overflow: auto;*/
+  margin-bottom: 10px;
+  /*margin-left: auto;*/
+  position: fixed;  
+  bottom: 0;
 }
 
 .index-image {
@@ -73,32 +101,40 @@ header {
   max-width: 300px;
 }
 
-.index-image:hover {
-  opacity: 0.5;
-  transition:all 0.5s ease;
-}
 
 .user-name {
   display: inline;
-  z-index: 100;
+  position: absolute;
+/*  top: 0;
+  left: 0;*/
+  width: 100%;
+  height: 100%;
+  /*z-index: 100;*/
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  opacity: 0;
+  background-color: white;
 }
 
-.user-pin p {
 
-}
-
-.song,
 .user-comments {
   border: 2px solid black;
   max-width: 70%;
+  /*margin-left: 25%;*/
   margin: 0 auto;
+  background-color: rgba(225,225,225,1);
+  margin-bottom: 20px;
 }
 
 .user-info {
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   max-width: 50%;
   margin: 0 auto;
   text-align: center;
+  background: rgba(255,255,255,.9);
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .user-info li {
@@ -114,7 +150,11 @@ header {
 .icon {
   max-height: 50px;
   margin: 0 10px;
+  /*border-radius: 80%;*/
+  background: rgba(255,255,255,0.5);
+  background: radial-gradient(rgba(225, 225, 225, 1),  rgba(225, 225, 225, 0));
 }
+
 
 .song-form {
   border: 2px solid black;
@@ -136,6 +176,62 @@ header {
   /*text-align: center;*/
 }
 
+.user-pin {
+  display:inline;
+  background: rgba(0,0,0,0);
+  color: rgba(0,0,0,0);
+  position: relative;
+  }
+
+.user-pin:hover {
+  opacity: 0.5;
+  transition:all 0.5s ease;
+
+  }
+
+.song  {
+   background-color:rgba(66,66,66,1);
+   max-width: 50%;
+   margin: 0 auto;  
+   color: black;
+   padding: 10px;
+  }
+
+.song a {
+  color: black;    
+  font-weight: bold;
+  }
+
+
+.comment {
+   color: black;
+  }
+
+#comment_content {
+  max-width: 90%;
+  margin-top: 10px;
+}
+
+
+
+audio {
+  width: 99%;
+  margin: 0 auto;
+}
+
+.user-comment-title {
+  margin: 30px 0 10px 191px;
+  border-top: solid 1px grey;
+  padding-top: 5px;
+  max-width: 70%;
+}
+
+.add-comment {
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
+
 .comment {
   /*line-height: 5px;*/
   margin: 5px 0;
@@ -144,33 +240,10 @@ header {
   text-align:left;
   }
 
- 
-
-.user-pin {
-  display:inline;
-  background: rgba(0,0,0,0);
-  color: rgba(0,0,0,0);
-  }
-
-/*.user-pin:hover {
-  background: rgba(255,255,255,0.2);
-  color: rgba(255,255,255,1);
- 
-} */
-  
-
-  audio {
-    width: 100%;
-  }
-
   .dateline {
     text-align: right;
   }
 
   .comment-image {
     max-height: 70px;
-  }
-
-  .song {
-    background-color:rgba(66,66,66,1);
   }
