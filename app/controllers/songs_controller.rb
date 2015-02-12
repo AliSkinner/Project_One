@@ -16,7 +16,7 @@ class SongsController < ApplicationController
   def update
     @song = Song.update(song_params)
     if @song.save
-      redirect_to users_path
+      redirect_to :back
     end
   end
 

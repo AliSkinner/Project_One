@@ -15,6 +15,7 @@ header {
   width: 100%;
   top:0px;
   z-index: 100;
+  padding: 0;
 }
 
 .site-head {
@@ -22,6 +23,8 @@ header {
   font-size: 70px;
   margin: 0;
   margin-right: 46%;
+  padding: 0;
+  height: 70px;
 }
 
 
@@ -54,6 +57,12 @@ header {
   text-align: center;
 }
 
+input {
+  background-color: grey;
+  border: none;
+  height: 20px;
+}
+
 
 .login {
   text-align: right;
@@ -71,7 +80,7 @@ header {
 
 
 .site-content {
-  margin-top: 70px;
+  margin-top: 90px;
   /*position: relative;*/
 }
 
@@ -80,6 +89,8 @@ header {
   max-width: 76%;
   float:left;
   position: relative;
+  margin-bottom: 20px;
+
   /*overflow: auto;*/
   /*clear: both;*/
 
@@ -87,13 +98,15 @@ header {
 
 
 #twitter-widget-0 {
-  max-height: 400px;
+  /*max-height: 400px;*/
   max-width: 20%;
   float: right;
-  margin-bottom: 10px;
+  margin-bottom: auto;
+  margin-top: 30px;
   /*margin-left: auto;*/
   position: fixed;  
-  bottom: 0;
+  /*bottom: 0;*/
+  height: 80%;
 }
 
 .index-image {
@@ -125,16 +138,19 @@ header {
   margin: 0 auto;
   background-color: rgba(225,225,225,1);
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .user-info {
   /*border: 2px solid black;*/
   max-width: 50%;
   margin: 0 auto;
+  margin-top: 90px;
   text-align: center;
   background: rgba(255,255,255,.9);
   padding: 20px;
   border-radius: 5px;
+  color: black;
 }
 
 .user-info li {
@@ -176,6 +192,7 @@ header {
   /*text-align: center;*/
 }
 
+
 .user-pin {
   display:inline;
   background: rgba(0,0,0,0);
@@ -192,9 +209,10 @@ header {
 .song  {
    background-color:rgba(66,66,66,1);
    max-width: 50%;
-   margin: 0 auto;  
+   margin: 5px auto;  
    color: black;
    padding: 10px;
+   border-radius: 5px;
   }
 
 .song a {
@@ -247,3 +265,63 @@ audio {
   .comment-image {
     max-height: 70px;
   }
+
+.submit {
+  height: 35px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-weight: bold;
+  border:none;
+  margin-top: 10px;
+}
+
+.submit:hover {
+  background-color: rgba(94,94,94,1);
+  color: white;
+  /*background-color: rgba(255,255,255,1);*/
+  transition:all 0.5s ease;
+
+}
+.new-login {
+  max-width: 200px;
+  padding-left: 42%;
+  padding-top: 50px;
+  line-height: 30px;
+}
+.new-login input,
+.register input {
+  width: 100%;
+}
+
+.new-login textarea,
+.register textarea {
+  background-color: grey;
+  border: none;
+  height: 90px;
+  width: 350px;
+  
+}
+
+.register {
+  max-width: 350px;
+  padding-left: 2%;
+  padding-top: 50px;
+  line-height: 30px;
+}
+
+input:focus{
+ outline-color:white;
+}​
+
+.song-form input[type="file"] {
+  background-color: black;
+}
+
+.date {
+  margin-left: auto;
+}
+
+ff {
+  background-color: black;
+  height: 300px;
+}
