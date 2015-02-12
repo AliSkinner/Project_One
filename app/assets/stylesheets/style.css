@@ -3,6 +3,7 @@ html {
   font-family: Arial;
   /*background-color: black;*/
   background: black fixed;
+  color: grey;
 }
 
 html a {
@@ -15,11 +16,22 @@ header {
   background: black;
   width: 100%;
   top:0px;
+  z-index: 100;
 }
 
-.site-content {
-  margin-top: 70px;
+.site-head {
+  display: inline;
+  font-size: 70px;
+  margin: 0;
+  margin-right: 46%;
 }
+
+
+ a:hover {
+  color: rgba(200,200,200,1);
+  transition:all 0.5s ease;
+}
+
 
 .login {
   text-align: right;
@@ -27,30 +39,44 @@ header {
   background-color: black;
   color: grey;
   display: inline;
-  margin-left: auto;
-}
-
-.login a {
-  color: grey;
+  /*margin-bottom: 10px;*/
+  /*height: 100%;*/
+  /*margin-left: 50%;*/
 }
 
 
-.site-head {
-  display: inline;
-  font-size: 50px;
-  margin: 0;
-  margin-right: auto;
+
+.site-content {
+  margin-top: 70px;
 }
+
 
 .users {
-  max-width: 80%;
+  max-width: 76%;
   float:left;
+  /*overflow: auto;*/
+  /*clear: both;*/
+
+}
+
+#twitter-widget-0 {
+  max-height: 400px;
+  max-width: 20%;
+  float: right;
+  margin-top: 100px;
+  position: fixed;
+  /*overflow: auto;*/
 }
 
 .index-image {
   height: 200px;
   max-width: 300px;
 }
+
+.index-image:hover {
+  opacity: 0.5;
+}
+
 
 .song,
 .user-comments {
@@ -115,11 +141,7 @@ header {
     display:inline;
   }
 
-  #twitter-widget-0 {
-    max-height: 400px;
-    max-width: 200px;
-    float: right;
-  }
+  
 
   audio {
     width: 100%;
