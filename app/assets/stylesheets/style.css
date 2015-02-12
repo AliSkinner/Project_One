@@ -4,7 +4,8 @@
   margin: 0 auto;
 }
 
-.song {
+.song,
+.user-comments {
   border: 2px solid black;
   max-width: 70%;
   margin: 0 auto;
@@ -55,11 +56,12 @@
 .comment {
   /*line-height: 5px;*/
   margin: 5px 0;
+  background-color: grey; 
+  width: 100%;
+  text-align:left;
   }
 
-  .comment p {
-    margin:2px;
-  }
+ 
 
   .user-pin {
     display:inline;
