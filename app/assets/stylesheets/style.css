@@ -1,7 +1,55 @@
-.home-banner {
-  max-height: 100px;
-  width: 70%;
-  margin: 0 auto;
+html {
+  /*font-family: 'Poiret One', cursive;*/
+  font-family: Arial;
+  /*background-color: black;*/
+  background: black fixed;
+}
+
+html a {
+  text-decoration: none;
+  color: grey;
+}
+
+header {
+  position: fixed;
+  background: black;
+  width: 100%;
+  top:0px;
+}
+
+.site-content {
+  margin-top: 70px;
+}
+
+.login {
+  text-align: right;
+  font-size: 25px;
+  background-color: black;
+  color: grey;
+  display: inline;
+  margin-left: auto;
+}
+
+.login a {
+  color: grey;
+}
+
+
+.site-head {
+  display: inline;
+  font-size: 50px;
+  margin: 0;
+  margin-right: auto;
+}
+
+.users {
+  max-width: 80%;
+  float:left;
+}
+
+.index-image {
+  height: 200px;
+  max-width: 300px;
 }
 
 .song,
@@ -71,4 +119,20 @@
     max-height: 400px;
     max-width: 200px;
     float: right;
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  .dateline {
+    text-align: right;
+  }
+
+  .comment-image {
+    max-height: 70px;
+  }
+
+  .song {
+    background-color:rgba(66,66,66,1);
   }

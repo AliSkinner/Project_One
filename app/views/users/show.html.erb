@@ -31,13 +31,13 @@
      <table class="comment">
        <tr>
          <th><%= link_to comment.user.name, user_path(comment.user) %></th>
-         <th><%= comment.created_at.strftime("%H:%M / %d %b. %Y") %> <% if can? :manage, comment %>
+         <th class="dateline"><%= comment.created_at.strftime("%H:%M / %d %b. %Y") %> <% if can? :manage, comment %>
              <%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: "Are you sure?" } %>
              <% end %>
          </th>
        </tr>
        <tr>
-         <td><%= image_tag(comment.user.profile_pic.thumb.url) %></td>
+         <td><%= image_tag(comment.user.profile_pic.thumb.url, class: "comment-image") %></td>
          <td><%= comment.content %></td>
        </tr>
      </table>
@@ -74,7 +74,7 @@
          <th> <%= comment.created_at.strftime("%H:%M / %d %b. %Y") %></th>
        </tr>
        <tr>
-         <td><%= link_to image_tag(comment.song.user.profile_pic.thumb.url), user_path(comment.song.user) %></td>
+         <td><%= link_to image_tag(comment.song.user.profile_pic.thumb.url, class: "comment-image"), user_path(comment.song.user) %></td>
          <td><%= comment.content %></td>
        </tr>
   <% end %>
