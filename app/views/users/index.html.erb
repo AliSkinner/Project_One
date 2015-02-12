@@ -1,6 +1,8 @@
 <div class="users">
   <% @users.each do |user| %>
+
   <div class="user-pin">
+    <!-- <div class="user-name"><%#= user.name %></div> -->
     <%= link_to image_tag(user.profile_pic.show.url, class: "index-image"), user_path(user) %>
   </div>
   <% end %>
