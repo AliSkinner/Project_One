@@ -133,7 +133,7 @@ input {
 
 .user-comments {
   border: 2px solid black;
-  max-width: 70%;
+  width: 70%;
   /*margin-left: 25%;*/
   margin: 0 auto;
   background-color: rgba(225,225,225,1);
@@ -319,9 +319,4 @@ input:focus{
 
 .date {
   margin-left: auto;
-}
-
-ff {
-  background-color: black;
-  height: 300px;
 }
