@@ -1,0 +1,26 @@
+
+%html
+  %head
+    %title Soundflex
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %link href='http://fonts.googleapis.com/css?family=Poiret+One|Syncopate|Wire+One' rel='stylesheet' type='text/css'
+  %body  
+    %header
+      %h1.site-head 
+        = link_to '.sound_flex', users_path
+      %login
+      - if current_user
+        =link_to current_user.name, user_path(current_user)
+        |
+        = link_to "Log out", destroy_user_session_path, method: :delete
+      - else
+        = link_to "Sign In", new_user_session_path
+        = link_to "Register", new_user_registration_path
+       
+            
+  .site-content
+    
+    = yield
+      

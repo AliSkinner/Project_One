@@ -1,0 +1,18 @@
+.add-comment
+
+  = form_for Comment.new do |f| %>
+  
+    .field
+        = f.label :content <br>
+        = f.text_area :content
+    
+  
+     .field
+       = f.hidden_field :user_id, value: current_user.id
+
+      .field
+       = f.hidden_field :song_id, value: song.id
+
+    .actions
+      = f.submit class: 'submit'
+
