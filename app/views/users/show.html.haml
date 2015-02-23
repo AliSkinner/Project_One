@@ -1,0 +1,58 @@
+.user-info
+  %h1= @user.name
+  = image_tag @user.profile_pic.show.url, class: "profile-show"
+  %ul
+    %li= mail_to @user.email, image_tag("email.png", class: 'icon')
+    %li= link_to image_tag("twitter.png", class: 'icon'), "http://www.twitter.com/#{@user.twitter}"
+    %li= link_to image_tag("website.png", class: 'icon'), "http://#{@user.website}"
+  %p Bio
+  %p= @user.bio
+- if @user.id == current_user.id
+  .song-form
+    = link_to 'Edit Profile', edit_user_path(@user)
+    \/ #{link_to 'Delete Profile', user_path(@user), method: :delete, data: { confirm: "Are you sure?" }}
+    \#{render 'songs/form'}
+- @user.songs.each do |song|
+  .song
+    %h3
+      = song.name
+      = song.created_at.strftime("%H:%M / %d %b. %Y")
+    = audio_tag song.file, controls: true
+    - if can? :manage, song
+      = link_to 'Delete', song_path(song), method: :delete, data: { confirm: "Are you sure?" }
+    - if song.comments.any?
+      - song.comments.each do |comment|
+        %table.comment
+          %tr
+            %th= link_to comment.user.name, user_path(comment.user)
+            %th.dateline
+              = comment.created_at.strftime("%H:%M / %d %b. %Y")
+              - if can? :manage, comment
+                = link_to 'Delete', comment_path(comment), class: "song-delete", method: :delete, data: { confirm: "Are you sure?" }
+          %tr
+            %td= image_tag(comment.user.profile_pic.thumb.url, class: "comment-image")
+            %td= comment.content
+    .add-comment
+      = form_for Comment.new do |f|
+        .comment-field
+          = f.label "Have Your Say"
+          %br
+            = f.text_area :content, size: "120x5"
+        .field
+          = f.hidden_field :user_id, value: current_user.id
+        .field
+          = f.hidden_field :song_id, value: song.id
+        .actions
+          = f.submit class: 'submit'
+%table.user-comments
+  %h3.user-comment-title
+    = @user.name
+    's Comments
+  - @user.comments.each do |comment|
+    %tr
+      %th= comment.song.name
+      %th
+        = comment.created_at.strftime("%H:%M / %d %b. %Y")
+    %tr
+      %td= link_to image_tag(comment.song.user.profile_pic.thumb.url, class: "comment-image"), user_path(comment.song.user)
+      %td= comment.content

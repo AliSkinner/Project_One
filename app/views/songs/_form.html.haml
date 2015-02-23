@@ -1,0 +1,19 @@
+.add-song
+
+  = form_for Song.new do |f|
+    %ul
+      %li Upload New Song
+      %li.field
+        = f.label :name
+        = f.text_field :name
+      
+      %li.field#ff
+        = f.label :file
+        = f.file_field :file
+      
+      %li.field
+        = f.hidden_field :user_id, value: current_user.id 
+        <br><br>
+  
+      %li.actions
+        = f.submit class: 'submit'

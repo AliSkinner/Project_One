@@ -1,0 +1,10 @@
+.users
+  - @users.each do |user|
+
+    .user-pin
+    = link_to image_tag(user.profile_pic.show.url, class: "index-image"), user_path(user)
+
+%footer
+  %a.twitter-timeline{"data-widget-id" => "565641102737571840", :height => "350", :href => "https://twitter.com/hashtag/soundflex", :width => "300"} #soundflex Tweets
+  :javascript
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

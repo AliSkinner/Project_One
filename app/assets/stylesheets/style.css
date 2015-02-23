@@ -320,3 +320,7 @@ input:focus{
 .date {
   margin-left: auto;
 }
+
+input#user_profile_pic {
+  background-color: none; !important
+}
